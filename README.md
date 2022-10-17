@@ -1,5 +1,5 @@
-# PythonSqlDataBase
-#Connect to Mysql Database and Fetch Data from Tables using Python Script
+# PythonSqlDataBaseDataFetching
+
 
 # Importing module
 import mysql.connector
@@ -14,10 +14,11 @@ def main():
     database="employee_schema"
 )
  
-    cursor = connection.cursor()#get the cursor
+    cursor = connection.cursor()
+ # get the cursor
     cursor.execute('Select * from employee_schema.Persons;')
     
-  # fetching data from tables
+ # fetching data from tables
     
     extracted_data = cursor.fetchall()
     for i in extracted_data:
